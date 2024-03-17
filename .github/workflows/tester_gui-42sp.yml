@@ -16,6 +16,7 @@ jobs:
         - uses: actions/checkout@v2
         - name: Permisson
           run: |
+            chmod 777 ./tester_gui-42sp/./evaluator.py
             chmod +x checker_linux
             chmod +x push_swap
         - name: Tester Gui
