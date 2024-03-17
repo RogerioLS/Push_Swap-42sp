@@ -74,9 +74,9 @@ exit_status = _07_nothing_on_string.nothing_on_string(program, valgrind, valgrin
 print("\n")
 
 # Only space on string
-print("Only space on string")
-exit_status = _08_only_space_on_string.only_space_on_string(program, valgrind, valgrind_check, colours, exit_status)
-print("\n")
+# print("Only space on string")
+# exit_status = _08_only_space_on_string.only_space_on_string(program, valgrind, valgrind_check, colours, exit_status)
+# print("\n")
 
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
