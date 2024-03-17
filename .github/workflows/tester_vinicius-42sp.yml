@@ -16,6 +16,7 @@ jobs:
         - uses: actions/checkout@v2
         - name: Clone Tester
           run: |
+            sudo apt update && sudo apt install valgrind
             chmod 777 checker_linux
             chmod 777 push_swap
             git clone https://github.com/Vinni-Cedraz/push_swap_averager.git
