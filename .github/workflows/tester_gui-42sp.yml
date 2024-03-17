@@ -1,0 +1,26 @@
+name: Tester Gui 42sp
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '00 12 */15 * *'
+
+jobs:
+  build:
+      name: Build
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Permisson
+          run: |
+            chmod +x checker_linux
+            chmod +x push_swap
+        - name: Tester Gui
+          run: make tester_gui
+        - name: List files in the repository
+          run: |
+            ls ${{ github.workspace }}
+        - run: echo "🍏 This job's status is ${{ job.status }}."
