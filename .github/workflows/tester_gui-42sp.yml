@@ -19,9 +19,9 @@ jobs:
             chmod 777 ./tester_gui-42sp/./evaluator.py
             chmod +x checker_linux
             chmod +x push_swap
-            cd tester_gui-42sp/
         - name: Tester Gui
-          run: ./evaluator.py
+          run: |
+            sudo apt update && sudo apt install valgrind && cd tester_gui-42sp && ./evaluator.py
         - name: List files in the repository
           run: |
             ls ${{ github.workspace }}
