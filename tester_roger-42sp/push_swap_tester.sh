@@ -35,7 +35,7 @@ while [ $count -lt $run ]; do
 	export VAR="$(seq -100000 100000 | shuf -n $SIZE | tr '\n' ' ')"
 	#export VAR="$(shuf -i 1-$SIZE | tr '\n' ' ')"
 
-	./push_swap $VAR > tester_roger-42sp/tmp.log
+	./push_swap $VAR > tmp.log
 
 	print() {
 		echo -ne "\033[1;97m$1: \033[1;93m$2  \033[1;m"
