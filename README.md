@@ -6,6 +6,7 @@
 ![Build](https://github.com/RogerioLS/Push_Swap-42sp/actions/workflows/build.yml/badge.svg)
 ![Tester Roger](https://github.com/RogerioLS/Push_Swap-42sp/actions/workflows/tester_roger-42sp.yml/badge.svg)
 ![Tester Gui](https://github.com/RogerioLS/Push_Swap-42sp/actions/workflows/tester_gui-42sp.yml/badge.svg)
+![Tester Vinicius](https://github.com/RogerioLS/Push_Swap-42sp/actions/workflows/tester_vinicius-42sp.yml/badge.svg)
 ![Static Badge](https://custom-icon-badges.demolab.com/badge/Push_Swap-42-blue?logo=repo)
 ![42 São Paulo](https://custom-icon-badges.demolab.com/badge/42-SP-1E2952)
 ![License](https://custom-icon-badges.demolab.com/github/license/RogerioLS/Push_Swap-42sp?logo=law&color=dark-green)
