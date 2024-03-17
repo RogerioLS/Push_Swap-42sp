@@ -99,6 +99,9 @@ valgrind: all
 tester_roger:
 	@./tester_roger-42sp/./push_swap_tester.sh 100 5
 
+tester_gui
+	@./tester_gui-42sp/./evaluator.py
+
 re: fclean all
 	@echo "$(BLUE) $(NAME) Cleaned and rebuilt everything!"
 
