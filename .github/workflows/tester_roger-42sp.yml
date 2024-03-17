@@ -14,6 +14,11 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
+        - name: Permisson
+          run: |
+            chmod 777 tester_roger-42sp/push_swap_tester.sh
+            chmod 777 checker_linux
+            chmod 777 push_swap
         - name: Tester Roger
           run: make tester_roger
         - name: List files in the repository
