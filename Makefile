@@ -97,7 +97,7 @@ valgrind: all
 	@cat $(VALGRIND_LOG)
 
 tester_roger:
-	@./tester_roger-42sp/./push_swap_tester.sh 10 5
+	@./tester_roger-42sp/./push_swap_tester.sh 100 5
 
 re: fclean all
 	@echo "$(BLUE) $(NAME) Cleaned and rebuilt everything!"
