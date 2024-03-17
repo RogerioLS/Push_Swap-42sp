@@ -23,11 +23,5 @@
 
 ---
 
-<div align = center>
-
-![](https://game.42sp.org.br//static/assets/achievements/fract-olm.png)
-
-</div>
-
 - Actual Status : finished.
-- Result        : Approved with 120 points ✅
+- Result        : Approved with 100 points ✅
