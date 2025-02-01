@@ -96,7 +96,10 @@ valgrind: all
 	./$(NAME) $(LEAK)
 	@cat $(VALGRIND_LOG)
 
+tester_roger:
+	@./tester_roger-42sp/./push_swap_tester.sh 100 5
+
 re: fclean all
 	@echo "$(BLUE) $(NAME) Cleaned and rebuilt everything!"
 
-.PHONY: all clean fclean re libft bonus norm create_objects_dir valgrind
+.PHONY: all clean fclean re libft bonus norm create_objects_dir valgrind tester_roger

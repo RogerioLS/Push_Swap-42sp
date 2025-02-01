@@ -1,0 +1,28 @@
+name: Tester Gui 42sp
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '00 12 */15 * *'
+
+jobs:
+  build:
+      name: Build
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Permisson
+          run: |
+            chmod 777 ./tester_gui-42sp/./evaluator.py
+            chmod +x checker_linux
+            chmod +x push_swap
+        - name: Tester Gui
+          run: |
+            sudo apt update && sudo apt install valgrind && cd tester_gui-42sp && ./evaluator.py
+        - name: List files in the repository
+          run: |
+            ls ${{ github.workspace }}
+        - run: echo "🍏 This job's status is ${{ job.status }}."

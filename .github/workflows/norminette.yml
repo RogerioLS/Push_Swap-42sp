@@ -1,0 +1,17 @@
+name: Norminette
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '00 12 */15 * *'
+
+jobs:
+  norminette:
+      name: Norminette
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: alexandregv/norminette-action@v3

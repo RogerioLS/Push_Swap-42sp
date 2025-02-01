@@ -1,0 +1,27 @@
+name: Tester Vinicius 42sp
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '00 12 */15 * *'
+
+jobs:
+  build:
+      name: Build
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Clone Tester
+          run: |
+            sudo apt update && sudo apt install valgrind
+            chmod 777 checker_linux
+            chmod 777 push_swap
+            git clone https://github.com/Vinni-Cedraz/push_swap_averager.git
+            make -C push_swap_averager
+        - name: List files in the repository
+          run: |
+            ls ${{ github.workspace }}
+        - run: echo "🍏 This job's status is ${{ job.status }}."
